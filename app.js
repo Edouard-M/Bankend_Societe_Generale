@@ -13,6 +13,11 @@ app.get('/balance', (req, res) => {
     res.status(200).json(result)
 })
 
+app.get('/history', (req, res) => {
+    result = bank.get_history();
+    res.status(200).json(result)
+})
+
 //default route
 app.use('*', (req, res) => {
     res.status(404).json('not found')
