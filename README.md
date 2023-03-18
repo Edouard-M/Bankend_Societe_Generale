@@ -61,7 +61,7 @@ The project contains 3 source files :
   - *add a statement in the history*
   - *show the history*
 - **bank.test.js :** contains the unit tests of the bank's functions
-- **app.js :** REST api wich allow the following intercations :
+- **app.js :** REST api which allow the following interactions :
   - *GET http://localhost:3001/balance* <sub>(show the balance)</sub>
   - *POST http://localhost:3001/deposit  {"number":value}* <sub>(add 'amount' to the balance)</sub>
   - *POST http://localhost:3001/withdraw  {"number":value}* <sub>(withdraw 'amount' from the balance)</sub>
