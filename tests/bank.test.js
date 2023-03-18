@@ -11,6 +11,19 @@ describe('balance', () => {
     });
 });
 
+describe('Deposit', () => {
+
+    test('adding amount', () => {
+        var amount = 10;
+        expect(bank.deposit(amount)).toBe(amount);
+    });
+
+    test('try to add a negative amount', () => {
+        var amount = -10;
+        expect(bank.deposit(amount)).toBe(-1);
+    });
+});
+
 describe('history', () => {
     test('get empty history', () => {
         expect(bank.get_history()).toStrictEqual([]);
