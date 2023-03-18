@@ -24,6 +24,20 @@ describe('Deposit', () => {
     });
 });
 
+describe('Withdraw', () => {
+
+    test('withdraw amount', () => {
+        var amount = 10;
+        bank.deposit(amount)
+        expect(bank.withdraw(amount)).toBe(0);
+    });
+
+    test('try to withdraw a negative amount', () => {
+        var amount = -10;
+        expect(bank.withdraw(amount)).toBe(-1);
+    });
+});
+
 describe('history', () => {
     test('get empty history', () => {
         expect(bank.get_history()).toStrictEqual([]);

@@ -28,6 +28,16 @@ app.post('/deposit', (req, res) => {
         res.status(400).json("bad request") 
 })
 
+app.post('/withdraw', (req, res) => {
+
+    if (req.body.number !== undefined) {
+        result = bank.withdraw(req.body.number)
+        res.status(200).json(result)
+    }
+    else 
+        res.status(400).json("bad request") 
+})
+
 //default route
 app.use('*', (req, res) => {
     res.status(404).json('not found')
