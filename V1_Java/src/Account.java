@@ -19,6 +19,17 @@ public class Account {
 
         return this.balance;
     }
+
+    public float withdrawal(float amount){
+        // Verify that the client has enough in the balance
+        if(((this.balance - amount) >= 0) && (amount > 0)){
+            this.balance -= amount;
+            return balance;
+        }
+        else
+            return -1; // If the withdrawal is impossible
+    }
+
     public float get_balance(){
         return this.balance;
     }
