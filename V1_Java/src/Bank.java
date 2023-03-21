@@ -17,4 +17,27 @@ public class Bank {
         return bankName;
     }
 
+    // Add a client if doesn't already exist
+    public Client addClient(String clientName){
+        Client newClient = this.get_client(clientName);
+
+        if(newClient == null){
+            newClient = new Client(clientName);
+            clients.add(newClient);
+            return newClient;
+        }
+        else
+            return null;
+    }
+
+    // Find a client
+    public Client get_client(String clientName){
+        // Search if the client is in the list
+        for(int i = 0 ; i < clients.size() ; i++)
+        {
+            if(clients.get(i).get_name().equals(clientName))
+                return clients.get(i);
+        }
+        return null;
+    }
 }
