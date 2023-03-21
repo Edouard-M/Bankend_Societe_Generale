@@ -12,6 +12,13 @@ public class Account {
         this.statement = new Vector<Operation>();
     }
 
+    public float deposit(float amount){
+        if(amount > 0){
+            this.balance += amount;
+        }
+
+        return this.balance;
+    }
     public float get_balance(){
         return this.balance;
     }
