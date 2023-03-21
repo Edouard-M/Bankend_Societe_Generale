@@ -13,4 +13,13 @@ public class Operation {
         this.balance = newBalance;
         this.date = new Date();
     }
+
+    public String toString()
+    {
+        return ("Operation Type : " + this.operationType + "\n" + 
+                "Date : " + this.date.toString() + "\n" + 
+                "Amount : " + this.amount + "\n" + 
+                "Balance : " + this.balance + "\n");
+    }
+
 }
