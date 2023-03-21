@@ -17,6 +17,26 @@ public class Bank {
         return bankName;
     }
 
+
+    public Account createAccount(Client accountClient){
+        boolean newClient = true;
+
+        // Test if the client has already an account
+        for(int i = 0 ; i < accounts.size() ; i++)
+        {
+            if(accounts.get(i).get_client() == accountClient)
+                newClient = false;
+        }
+
+        if(newClient == true){
+            Account newAccount = new Account(accountClient);
+            accounts.add(newAccount);
+            return newAccount;
+        }
+        else
+            return null;
+    }
+
     // Add a client if doesn't already exist
     public Client addClient(String clientName){
         Client newClient = this.get_client(clientName);
@@ -37,6 +57,16 @@ public class Bank {
         {
             if(clients.get(i).get_name().equals(clientName))
                 return clients.get(i);
+        }
+        return null;
+    }
+
+    // Find the account of a client
+    public Account get_account(Client client){
+        // Search in the list of accounts
+        for(int i = 0 ; i < accounts.size() ; i++){
+            if(accounts.get(i).get_client() == client)
+                return accounts.get(i);
         }
         return null;
     }
