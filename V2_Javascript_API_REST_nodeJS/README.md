@@ -1,6 +1,10 @@
-# **bankend** - Société Générale
+# **V2 JavaScript version** - Société Générale
 
 ### Author : *Edouard Mignien*
+
+This project is an exercise provided by *Société Générale*. 
+
+This `V2` project is the JavaScript version with a `REST API` and `Unit Tests` to demonstrate a more `back-end` structure. This project use NodeJS and ExpressJS.
 
 ### **Prerequisites**
 
